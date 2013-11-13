@@ -11,7 +11,7 @@ import com.baidu.meet.config.Config;
 import com.baidu.meet.util.FileHelper;
 import com.baidu.meet.util.StringHelper;
 /**
- * TiebaLog 类，主要是控制Log信息
+ * MeetLog 类，主要是控制Log信息
  * @author guagua
  *
  */
@@ -31,7 +31,7 @@ public class MeetLog {
 			fullMsg.append(method);
 			fullMsg.append(":");
 			fullMsg.append(msg);
-			return Log.i("TiebaLog", fullMsg.toString());
+			return Log.i("MeetLog", fullMsg.toString());
 		}else{
 			return 0;
 		}
@@ -88,7 +88,7 @@ public class MeetLog {
 			fullMsg.append(":");
 			fullMsg.append(msg);
 			logToSDcard(fullMsg.toString());//error信息存入sd卡。 按照log_x月x日的方式存储
-			return Log.e("TiebaLog", fullMsg.toString());
+			return Log.e("MeetLog", fullMsg.toString());
 		}else{
 			return 0;
 		}
@@ -110,7 +110,7 @@ public class MeetLog {
 			fullMsg.append(method);
 			fullMsg.append(":");
 			fullMsg.append(msg);
-			return Log.w("TiebaLog", fullMsg.toString());
+			return Log.w("MeetLog", fullMsg.toString());
 		}else{
 			return 0;
 		}
@@ -132,7 +132,7 @@ public class MeetLog {
 			fullMsg.append(method);
 			fullMsg.append(":");
 			fullMsg.append(msg);
-			return Log.v("TiebaLog", fullMsg.toString());
+			return Log.v("MeetLog", fullMsg.toString());
 		}else{
 			return 0;
 		}
@@ -154,7 +154,7 @@ public class MeetLog {
 			fullMsg.append(method);
 			fullMsg.append(":");
 			fullMsg.append(msg);
-			return Log.d("TiebaLog", fullMsg.toString());
+			return Log.d("MeetLog", fullMsg.toString());
 		}else{
 			return 0;
 		}
@@ -269,7 +269,7 @@ public class MeetLog {
 				error = fullMsg.toString();
 				
 				if(Config.getDebugSwitch()){
-					Log.e("TiebaLog", error);
+					Log.e("MeetLog", error);
 				}
 				
 				if(should_write_file == true){
