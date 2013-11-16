@@ -11,6 +11,7 @@ public class RegisterData {
 	private int quxiang;
 	private String imei;
 	private String phone;	
+	private int mPicType;
 	
 	public RegisterData(){
 	}
@@ -48,6 +49,14 @@ public class RegisterData {
 	 * 输出解析后的数据
 	 */
 	public void logPrint(){
+	}
+	
+	public void setPicType(int picType) {
+		this.mPicType = picType;
+	}
+
+	public int getPicType() {
+		return mPicType;
 	}
 
 }

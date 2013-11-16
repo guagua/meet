@@ -1,13 +1,17 @@
 package com.baidu.meet;
 
+import com.baidu.meet.config.Config;
 import com.baidu.meet.imageLoader.AsyncImageLoader;
 import com.baidu.meet.imageLoader.AsyncImageLoader.ImageCallback;
 import com.baidu.meet.model.BaseLoadDataCallBack;
 import com.baidu.meet.model.RegisterModel;
 import com.baidu.meet.util.UtilHelper;
+import com.baidu.meet.util.WriteUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.view.Menu;
 import android.view.View;
@@ -20,6 +24,7 @@ public class LogoActivity extends Activity {
 	private TextView title;
 	private TextView register;
 	private ImageView image;
+	private AlertDialog mSelectImageDialog = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,8 @@ public class LogoActivity extends Activity {
 	private void initData() {
 		mRegisterModel = new RegisterModel();
 		mRegisterModel.setLoadDataCallBack(mLoadDataCallBack);
+		
+		initializeSelectImageDialog();
 	}
 
 	@Override
@@ -75,11 +82,38 @@ public class LogoActivity extends Activity {
 
 	private void testResgister() {
 		// mRegisterModel.register();
-		AsyncImageLoader loader = new AsyncImageLoader(this);
-		String url = "http://img3.cache.netease.com/photo/0001/2013-11-08/900x600_9D6O343S19BR0001.jpg";
+//		AsyncImageLoader loader = new AsyncImageLoader(this);
+//		String url = "http://img3.cache.netease.com/photo/0001/2013-11-08/900x600_9D6O343S19BR0001.jpg";
+//
+//		String urlTest = "http://d.pcs.baidu.com/thumbnail/860a7a71331725fb1bc93fb8e65d7f1d?fid=138269170-250528-3752294460&time=1383986317&rt=pr&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-3rqtnKGHARQCuh%2BQuJlcMehVEvQ%3D&expires=8h&r=209599956&size=c850_u580&quality=100";
+//		loader.loadImage(urlTest, mImageCallback);
+		mSelectImageDialog.show();
+	}
+	
+	protected void initializeSelectImageDialog() {
+		String[] items = { getString(R.string.take_photo),
+				getString(R.string.album) };
 
-		String urlTest = "http://d.pcs.baidu.com/thumbnail/860a7a71331725fb1bc93fb8e65d7f1d?fid=138269170-250528-3752294460&time=1383986317&rt=pr&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-3rqtnKGHARQCuh%2BQuJlcMehVEvQ%3D&expires=8h&r=209599956&size=c850_u580&quality=100";
-		loader.loadImage(urlTest, mImageCallback);
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle(getString(R.string.operation));
+		builder.setItems(items, new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				if (which == 0) {
+					WriteUtil.takePhoto(LogoActivity.this);
+//					mModel.setPicType(Config.PIC_PHOTO);
+				} else if (which == 1) {
+					WriteUtil.getAlbumImage(LogoActivity.this);
+//					mModel.setPicType(Config.PIC_ALBUM_IMAGE);
+				}
+			}
+
+		});
+		if (mSelectImageDialog == null) {
+			mSelectImageDialog = builder.create();
+			mSelectImageDialog.setCanceledOnTouchOutside(false);
+		}
 	}
 
 }

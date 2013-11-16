@@ -41,6 +41,9 @@ public class Config {
 	public static final String TMP_DATABASE_NAME = "meet_you_temp.db";
 	public static final int DATABASE_VERSION = 6;
 	
+	public static final int PIC_ALBUM_IMAGE = 1;
+	public static final int PIC_PHOTO = 2;
+	
 	public static int getBigImageSize() {
 		return BIG_IMAGE_SIZE;
 	}
