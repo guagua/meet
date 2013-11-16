@@ -13,6 +13,7 @@ import android.graphics.Bitmap;
 public class Config {
 	public static final String SERVER_ADDRESS = 	"http://lovefacedev.duapp.com/";
 	public static final String REGISTER = 			"?r=user/register";
+	public static final String UPLOAD_IMAGE = 		"?r=uploda/image";
 	public static final String GET_PIC = 			"?r=picture/getpic";
 	public static final String UPDATE_RELATION = 	"?r=relation/updateRelation";
 	public static final String GET_LOVELIST = 		"?r=relation/getlovelist";
@@ -43,6 +44,24 @@ public class Config {
 	
 	public static final int PIC_ALBUM_IMAGE = 1;
 	public static final int PIC_PHOTO = 2;
+	
+	public static final String CONFIG_FILE_NAME = "meet_setting";
+	
+	public static final int HEAD_IMG_SIZE = 110;
+	public static final String IMAGE_RESIZED_FILE = "tieba_resized_image";
+	public static final String PERSON_HEAD_FILE = "tieba_head_image";
+	public static final String GROUP_HEAD_FILE = "tieba_group_image";
+	public static final int POST_IMAGE_QUALITY = 80;
+	public static final int POST_IMAGE_DISPLAY = 100;
+	public static final int POST_IMAGE_SMALL = 600;
+	public static final int POST_IMAGE_MIDDLE = 750;
+	public static final int POST_IMAGE_BIG = 900;
+	
+	public static final String BROADCAST_IMAGE_RESIZED = "com.baidu.tieba.broadcast.image.resized";
+	
+	public static final int CHUNK_UPLOAD_SIZE = 1024 * 10;
+	
+	public static final String IMAGE_RESIZED_FILE_DISPLAY = "tieba_resized_image_display";
 	
 	public static int getBigImageSize() {
 		return BIG_IMAGE_SIZE;

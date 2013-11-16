@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_above="@+id/filters_layout"
+    android:background="#ff1e1e1e"
+    android:orientation="vertical" >
+
+    <com.baidu.meet.register.EditHeadImageView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:scrollbars="vertical" >
+    </com.baidu.meet.register.EditHeadImageView>
+    
+    <com.baidu.meet.util.NavigationBar
+        android:id="@+id/navigation_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" >
+    </ProgressBar>
+
+    <Button
+        android:id="@+id/show_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/hide_button"
+        android:layout_marginBottom="8dip"
+        android:layout_marginRight="8dip" />
+
+    <include
+        android:id="@+id/beautify_rotate"
+        layout="@layout/beautify" />
+
+</FrameLayout>

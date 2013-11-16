@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部导航栏：文字按钮 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigationBarTxtBtn"
+    style="@style/navi_textbtn_bg_comm"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:gravity="center"
+    android:background="@drawable/navi_op_text_bg"
+    android:textColor="@color/navi_op_text" >
+
+</TextView>

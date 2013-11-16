@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部导航栏：步骤按钮 -->
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigationBarStepBtn"
+    style="@style/navi_textbtn_bg_comm"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/navi_op_text_bg"
+    android:textColor="@color/navi_op_text" >
+
+
+</Button>

@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.baidu.meet.LogoActivity"
+            android:alwaysRetainTaskState="true"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,9 +26,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.baidu.meet.RegisterActivity"
+            android:name="com.baidu.meet.register.RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name="com.baidu.meet.show.ShowActivity"
+            android:label="@string/title_activity_show" >
+        </activity>
+        <activity
+            android:name="com.baidu.meet.talk.MeetListActivity"
+            android:label="@string/title_activity_meet_list" >
+        </activity>
+        <activity
+            android:name="com.baidu.meet.talk.TalkActivity"
+            android:label="@string/title_activity_talk" >
+        </activity>
+        <activity
+            android:name="com.baidu.meet.register.EditHeadActivity"
+            android:label="@string/title_activity_talk" 
+            android:process=":remote">
+        </activity>
+        <service
+            android:name="com.baidu.meet.util.TiebaPrepareImageService"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
@@ -71,5 +97,6 @@
     </uses-permission>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
 
 </manifest>

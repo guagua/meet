@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 导航栏 名称 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba"
+    android:id="@+id/navigationTitle"
+    style="@style/title_info_shadow"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:paddingLeft="@dimen/navi_title_padding_left"
+    android:paddingRight="@dimen/navi_title_padding_right"
+    android:singleLine="true"
+    android:textColor="@color/common_page_title" />

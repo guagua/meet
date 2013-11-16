@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/beautify_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/beautify_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/beautify_radio_button"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dip"
+                android:paddingBottom="14dip"
+                android:paddingTop="14dip"
+                android:text="@string/beautify"
+                android:textColor="@color/beautify_rotate_tab_unchecked_color"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rotate_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/beautify_radio_button"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dip"
+                android:paddingBottom="14dip"
+                android:paddingTop="14dip"
+                android:text="@string/rotate"
+                android:textColor="@color/beautify_rotate_tab_unchecked_color"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/hide_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/hide_button"
+            android:layout_marginRight="8dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <HorizontalScrollView
+            android:id="@+id/filters_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/editimage_bar_bg" >
+
+            <LinearLayout
+                android:id="@+id/filters"
+                android:layout_width="wrap_content"
+                android:layout_height="71dip" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/rotate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/editimage_bar_bg"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/rotate_left"
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_btn_bg"
+                android:drawablePadding="12dip"
+                android:drawableTop="@drawable/filter_rotate_left"
+                android:gravity="center"
+                android:paddingTop="19dip"
+                android:text="@string/rotate_left"
+                android:textColor="@color/text_blue_selector_color"
+                android:textSize="11sp" >
+            </Button>
+
+            <Button
+                android:id="@+id/rotate_right"
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_btn_bg"
+                android:drawablePadding="12dip"
+                android:drawableTop="@drawable/filter_rotate_right"
+                android:gravity="center"
+                android:paddingTop="19dip"
+                android:text="@string/rotate_right"
+                android:textColor="@color/text_blue_selector_color"
+                android:textSize="11sp" >
+            </Button>
+
+            <Button
+                android:id="@+id/rotate_left_right"
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_btn_bg"
+                android:drawablePadding="12dip"
+                android:drawableTop="@drawable/filter_flip_left_right"
+                android:gravity="center"
+                android:paddingTop="19dip"
+                android:text="@string/rotate_left_right"
+                android:textColor="@color/text_blue_selector_color"
+                android:textSize="11sp" >
+            </Button>
+
+            <Button
+                android:id="@+id/rotate_up_down"
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_btn_bg"
+                android:drawablePadding="12dip"
+                android:drawableTop="@drawable/filter_flip_up_down"
+                android:gravity="center"
+                android:paddingTop="19dip"
+                android:text="@string/rotate_up_down"
+                android:textColor="@color/text_blue_selector_color"
+                android:textSize="11sp" >
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

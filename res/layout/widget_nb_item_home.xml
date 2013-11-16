@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部导航栏：主页按钮 -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+           android:id="@+id/navigationBarHome"
+           style="@style/navi_btn_bg_comm"
+           android:scaleType="center"
+           android:layout_width="wrap_content"
+           android:layout_height="fill_parent"
+           android:src="@drawable/icon_bar_home_n"
+           android:background="@drawable/title_icon_bg">
+</ImageView>

@@ -3,7 +3,16 @@
 
     <string name="app_name">meet</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="meet_you">欢迎来到Meet!</string>
+    <string name="take_a_photo">来个照片吧~</string>
+    <string name="register">注册</string>
+    <string name="user_name">用户名</string>
+    <string name="sex">性别：</string>
+    <string name="quxiang">寻找对象：</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="other">其它</string>
+    <string name="input_user_name">请输入用户名...</string>
     <string name="signed_label">已签</string>
     <string name="group_no_data_tip">你还没有加入群组\n去你关注的吧里看看，发现更多有趣群组</string>
     <string name="forum_not_like_tip">你还没有关注任何吧</string>
@@ -216,9 +225,6 @@
     <string name="its_bar">Ta关注的吧</string>
     <string name="degree">等级</string>
     <string name="delete_like_info">删除后将不在进吧页面中显示本吧</string>
-    <string name="sex">性别：</string>
-    <string name="man">男</string>
-    <string name="woman">女</string>
     <string name="self_intro">个人简介：</string>
     <string name="msg_remind">消息提醒</string>
     <string name="sign_remind">每日签到提醒</string>
@@ -1161,5 +1167,9 @@
     <string name="nearby_group_title">附近群组</string>
     <string name="nearby_group_create">建群</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_show">ShowActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_meet_list">MeetListActivity</string>
+    <string name="title_activity_talk">TalkActivity</string>
 
 </resources>

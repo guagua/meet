@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用字体尺寸 -->
+    <dimen name="default_size_26">18sp</dimen>
+    <dimen name="default_size_24">16sp</dimen>
+    <dimen name="default_size_22">14sp</dimen>
+    <dimen name="default_size_21">14sp</dimen>
+    <dimen name="default_size_20">13sp</dimen>
+    <dimen name="default_size_18">12sp</dimen>
+    <dimen name="default_size_16">10sp</dimen>
+    <dimen name="default_size_15">9sp</dimen>
+    <dimen name="default_size_14">8sp</dimen>
+    <dimen name="default_size_12">6sp</dimen>
+    <dimen name="default_size_10">5sp</dimen>
+    <dimen name="default_size_8">5sp</dimen>
+    <dimen name="default_size_6">5sp</dimen>
+    <!-- end of 通用字体尺寸 -->
+
+
+    <!-- 通用间距 -->
+    <dimen name="default_gap_50">34dp</dimen>
+    <dimen name="default_gap_30">20dp</dimen>
+    <dimen name="default_gap_27">18dp</dimen>
+    <dimen name="default_gap_26">18dp</dimen>
+    <dimen name="default_gap_20">14dp</dimen>
+    <dimen name="default_gap_16">10dp</dimen>
+    <dimen name="default_gap_14">8dp</dimen>
+    <dimen name="default_gap_10">6dp</dimen>
+    <dimen name="default_gap_8">6dp</dimen>
+    <dimen name="default_gap_6">4dp</dimen>
+    <dimen name="default_gap_2">1dp</dimen>
+    <dimen name="default_gap_0">0dip</dimen>
+    <!-- end of 通用间距 -->
+
+
+    <!-- 通用 -->
+    <dimen name="common_navi_title">@dimen/default_size_26</dimen>
+    <dimen name="common_forum_title">@dimen/default_size_24</dimen>
+    <dimen name="common_content">@dimen/default_size_22</dimen>
+    <dimen name="common_gradetext_padding_top">3dp</dimen>
+    <!-- end of 通用 -->
+
+
+    <!-- 顶部导航条 -->
+    <dimen name="navi_height">45dip</dimen>
+    <dimen name="navi_bottom_line_height">1dip</dimen>
+    <dimen name="navi_item_height">44dip</dimen>
+    <dimen name="navi_item_width">45dip</dimen>
+    <dimen name="navi_padding_left">0dip</dimen>
+    <dimen name="navi_padding_top">0dip</dimen>
+    <dimen name="navi_padding_right">0dip</dimen>
+    <dimen name="navi_padding_bottom">0dip</dimen>
+    <dimen name="navi_btn_margin_top">6dp</dimen>
+    <dimen name="navi_btn_margin_bottom">6dp</dimen>
+    <dimen name="navi_btn_margin_right">6dp</dimen>
+    <dimen name="navi_btn_width">45dp</dimen>
+    <dimen name="navi_btn_height">44dp</dimen>
+    <dimen name="navi_btn_padding_left">11dp</dimen>
+    <dimen name="navi_btn_padding_right">11dp</dimen>
+    <dimen name="navi_btn_padding_top">5dp</dimen>
+    <dimen name="navi_btn_padding_bottom">5dp</dimen>
+    <dimen name="navi_textbtn_padding_left">10dp</dimen>
+    <dimen name="navi_textbtn_padding_right">10dp</dimen>
+    <dimen name="navi_textbtn_padding_top">0dp</dimen>
+    <dimen name="navi_textbtn_padding_bottom">0dp</dimen>
+    <dimen name="navi_title_padding_left">10dp</dimen>
+    <dimen name="navi_title_padding_right">10dp</dimen>
+    <dimen name="navi_multititle_padding_left">10dp</dimen>
+    <dimen name="navi_multititle_padding_right">10dp</dimen>
+    <dimen name="navi_multititle_padding_top">0dp</dimen>
+    <dimen name="navi_multititle_padding_bottom">0dp</dimen>
+    <dimen name="navi_multititle_margin_left">0dp</dimen>
+    <dimen name="navi_multititle_margin_right">0dp</dimen>
+    <dimen name="navi_btn_text">@dimen/default_size_18</dimen>
+    <dimen name="navi_multititle_text">@dimen/default_size_22</dimen>
+    <dimen name="navi_more_text">@dimen/default_size_22</dimen>
+    <dimen name="navi_signall_text">@dimen/default_size_14</dimen>
+    <!-- end of 顶部导航条 -->
+
+
+    <!-- 底部主tab -->
+    <dimen name="maintab_bottom_font">@dimen/default_size_18</dimen>
+    <dimen name="maintab_bottomicon_padding_top">4dp</dimen>
+    <dimen name="maintab_bottomicon_padding_bottom">2dp</dimen>
+    <dimen name="maintab_bottomicon_drawable_padding">1dp</dimen>
+    <dimen name="maintab_bottomicon_margin">0dp</dimen>
+    <!-- end of 底部主tab -->
+
+
+    <!-- 进吧页 -->
+    <dimen name="enterforum_title_width">85dip</dimen>
+    <dimen name="enterforum_title_height">34dip</dimen>
+    <dimen name="enterforum_guidebottom_margin_top">10dp</dimen>
+    <dimen name="enterforum_guidebottom_margin_bottom">10dp</dimen>
+    <dimen name="enterforum_list_first_margin_right">8dp</dimen>
+    <dimen name="enterforum_sign_text">@dimen/default_size_12</dimen>
+    <dimen name="enterforum_list_text">@dimen/default_size_22</dimen>
+    <dimen name="enterforum_grade_text">@dimen/default_size_14</dimen>
+    <dimen name="enterforum_grade_padding_top">3dp</dimen>
+    <!-- end of 进吧页 -->
+
+
+    <!-- 吧的群组列表界面 -->
+    <dimen name="im_frsgroup_listitem_height">80dip</dimen>
+    <dimen name="im_frsgroup_listitem_star_left">5dip</dimen>
+    <dimen name="im_frsgroup_listitem_image_margin">9dip</dimen>
+    <dimen name="im_frsgroup_listitem_text_margintop">9dip</dimen>
+    <dimen name="im_frsgroup_listitem_image_width">62dip</dimen>
+    <dimen name="im_frsgroup_listitem_image_height">62dip</dimen>
+    <dimen name="im_frsgroup_tab_height">40dip</dimen>
+    <dimen name="im_frsgroup_tab_middle_line_height">15dip</dimen>
+    <dimen name="im_frsgroup_tab_middle_line_width">2dip</dimen>
+    <dimen name="im_frsgroup_tab_check_line_width">71dip</dimen>
+    <dimen name="im_frsgroup_tab_check_line_height">3dip</dimen>
+    <dimen name="im_frsgroup_tab_bottom_line_height">1dip</dimen>
+
+
+    <!--    群成员列表界面      -->
+    <dimen name="im_members_listitem_image_paddingleft">9dip</dimen>
+    <dimen name="im_members_listitem_image_paddingtop">4dip</dimen>
+    <dimen name="im_members_listitem_image_range">42dip</dimen>
+    <dimen name="im_members_listitem_sex_marginleft">5dip</dimen>
+    <dimen name="im_members_listitem_time_marginright">9dip</dimen>
+    <dimen name="im_members_listitem_line_height">2dip</dimen>
+    <dimen name="im_members_listitem_checkbox_marginleft">14dip</dimen>
+    <dimen name="im_members_listitem_checkbox_margigright">-14dip</dimen>
+    <dimen name="im_members_bottom_cancel_marginleft">16dip</dimen>
+    <dimen name="im_members_bottom_cancel_paddingleft">10dip</dimen>
+    
+    <!-- 广场页 -->
+    <dimen name="square_page_padding">6dip</dimen>
+    <dimen name="square_page_more_padding">7dip</dimen>
+    <dimen name="square_line_padding">8dip</dimen>
+    <dimen name="square_block_padding">5dip</dimen>
+    <dimen name="sqaure_block_title_marginLeft">9dip</dimen>
+    <dimen name="sqaure_block_title_height">31dip</dimen>
+    <dimen name="sqaure_block_title_all_marginRight">10dip</dimen>
+    <dimen name="sqaure_block_title_all_drawablePadding">2dip</dimen>
+    <dimen name="square_caroucel_paddingTop">10dip</dimen>
+    <dimen name="square_caroucel_paddingBottom">6dip</dimen>
+    
+    <dimen name="square_post_block_height">126dip</dimen>
+    <dimen name="square_post_reply_marginRight">24dip</dimen>
+    <dimen name="square_post_paddingTop">5dip</dimen>
+    <dimen name="square_post_paddingLeftRight">9dip</dimen>
+    <dimen name="square_post_paddingBottom">15dip</dimen>
+    <dimen name="square_post_title_marginTop">12dip</dimen>
+    <dimen name="square_post_title_marginBottom">6dip</dimen>
+    <dimen name="square_post_content_marginBottom">12dip</dimen>
+    <dimen name="square_post_ht_marginTop">3dip</dimen>
+    <dimen name="square_post_line_marginLR">7dip</dimen>
+    <dimen name="square_post_indicator_marginBottom">16dip</dimen>
+    <dimen name="square_indicator_spacing">10dip</dimen>
+    <dimen name="square_forum_width">70dip</dimen>
+    <dimen name="square_forum_height">70dip</dimen>
+    <dimen name="square_forum_marginTop">8dip</dimen>
+    <dimen name="square_forum_marginLeft">10dip</dimen>
+    <dimen name="square_forum_marginBottom">8dip</dimen>
+    <dimen name="square_scroll_paddingBottom">9dip</dimen>
+    <dimen name="square_browse_pic_width">45dip</dimen>
+    <dimen name="square_browse_pic_height">45dip</dimen>
+    <dimen name="square_browse_item_padding">9dip</dimen>
+    <dimen name="square_browse_item_height">63dip</dimen>
+    <dimen name="square_forum_topic_margin">6dip</dimen>
+    <dimen name="square_forum_topic_paddingBottom">9dip</dimen>
+    <dimen name="square_forum_list_height">40dip</dimen>
+    <dimen name="square_forum_list_text_padding">9dip</dimen>
+    <dimen name="square_forum_list_divider_width">1dip</dimen>
+    <dimen name="square_forum_list_divider_height">27dip</dimen>
+    <dimen name="square_forum_list_paddingBottom">9dip</dimen>
+    
+    <dimen name="square_arrow_paddingleft">15dip</dimen>
+    <dimen name="sqaure_block_title_text">@dimen/default_size_18</dimen>
+    <dimen name="sqaure_forum_title_text">@dimen/default_size_18</dimen>
+    <dimen name="sqaure_all_text">@dimen/default_size_18</dimen>
+    <dimen name="sqaure_post_title_text">@dimen/default_size_24</dimen>
+    <dimen name="sqaure_post_content_text">@dimen/default_size_18</dimen>
+    <dimen name="sqaure_post_info_text">@dimen/default_size_18</dimen>
+    <dimen name="sqaure_browse_title_text">@dimen/default_size_24</dimen>
+    <dimen name="sqaure_browse_sub_title_text">@dimen/default_size_18</dimen>
+    <dimen name="square_forum_list_title_text">@dimen/default_size_22</dimen>
+    <!-- END OF广场页 -->
+
+
+    <!-- 搜索栏 -->
+    <dimen name="search_tab_height">42dip</dimen>
+    <dimen name="search_tab_padding">14dp</dimen>
+    <dimen name="search_tab_text">@dimen/default_size_22</dimen>
+    <dimen name="search_bar_default_text">@dimen/default_size_18</dimen>
+    <dimen name="search_bar_quick_response">@dimen/default_size_14</dimen>
+    <dimen name="search_from_qr">50dip</dimen>
+    <dimen name="search_hol">7dip</dimen>
+    <!-- end of 搜索栏 -->
+
+
+    <!-- TopRec -->
+    <dimen name="toprec_finishbox_width">70dp</dimen>
+    <!-- end of TopRec -->
+
+
+    <!-- 发帖 WriteActivity -->
+    <dimen name="write_title_padding">10dp</dimen>
+    <dimen name="write_content_padding_left">10dp</dimen>
+    <dimen name="write_content_padding_right">10dp</dimen>
+    <dimen name="write_content_padding_top">10dp</dimen>
+    <dimen name="write_title_height">46dp</dimen>
+    <dimen name="write_line_height">1px</dimen>
+    <dimen name="write_title_font">@dimen/default_size_24</dimen>
+    <dimen name="write_content_font">@dimen/default_size_24</dimen>
+    <!-- end of 发帖 WriteActivity -->
+
+
+    <!-- 首页和frs页 通用listview -->
+    <dimen name="listview_item_margin">@dimen/default_gap_10</dimen>
+    <dimen name="listview_item_image_margin">@dimen/default_gap_10</dimen>
+    <dimen name="listview_item_abstract_margin_bottom">@dimen/default_gap_20</dimen>
+    <dimen name="listview_item_bottom_time_margin_left">@dimen/default_gap_16</dimen>
+    <dimen name="listview_item_bottom_num_margin_right">@dimen/default_gap_14</dimen>
+    <dimen name="listview_item_voice_margin">12dip</dimen>
+    <dimen name="listview_item_padding">9dip</dimen>
+    <dimen name="listview_divider_height">5dip</dimen>
+    <dimen name="listview_item_bottom_height">36dip</dimen>
+    <dimen name="listview_item_bottom_drawable_padding">4dip</dimen>
+    <dimen name="listview_item_margin_half">3dip</dimen>
+    <dimen name="listview_item_title_text">@dimen/default_size_24</dimen>
+    <dimen name="listview_item_abstract_text">@dimen/default_size_21</dimen>
+    <dimen name="listview_item_bottom_text">@dimen/default_size_18</dimen>
+    <!-- end of 首页和frs页 通用listview -->
+
+
+    <!-- 首页begin -->
+    <dimen name="forumfeed_nodata_image_margin_top">10dip</dimen>
+    <dimen name="forumfeed_tip1_margin_top">5dip</dimen>
+    <dimen name="forumfeed_tip1_margin_bottom">6dip</dimen>
+    <dimen name="forumfeed_tip1_padding_right">7dip</dimen>
+    <dimen name="forumfeed_tip2_padding_left">2dip</dimen>
+    <dimen name="forumfeed_btngo_padding">7dip</dimen>
+    <dimen name="forumfeed_icon_width">12dip</dimen>
+    <dimen name="forumfeed_icon_height">12dip</dimen>
+    <dimen name="forumfeed_icon_margin">6dip</dimen>
+    <dimen name="forumfeed_first_item_margin_top">2dip</dimen>
+    <dimen name="forumfeed_item_name_text">@dimen/default_size_16</dimen>
+    <dimen name="forumfeed_listmore_text">@dimen/default_size_22</dimen>
+    <dimen name="forumfeed_tip1_text">@dimen/default_size_20</dimen>
+    <dimen name="forumfeed_tip2_text">@dimen/default_size_22</dimen>
+    <dimen name="forumfeed_btngo_text">@dimen/default_size_24</dimen>
+    <!-- 首页end -->
+
+
+    <!-- 个人中心 -->
+    <dimen name="person_topimage_height">150dp</dimen>
+    <dimen name="person_center_height">45dp</dimen>
+    <dimen name="person_image_layout_width">90dp</dimen>
+    <dimen name="person_image_layout_height">90dp</dimen>
+    <dimen name="person_imagebg_width">88dp</dimen>
+    <dimen name="person_imagebg_height">88dp</dimen>
+    <dimen name="person_image_width">80dp</dimen>
+    <dimen name="person_image_height">80dp</dimen>
+    <dimen name="person_center_btn_width">98dp</dimen>
+    <dimen name="person_center_btn_height">32dp</dimen>
+    <dimen name="person_center_attenbtn_margin_left">18dp</dimen>
+    <dimen name="person_center_msgbtn_margin_left">14dp</dimen>
+    <dimen name="person_center_btn_margin_left">10dp</dimen>
+    <dimen name="person_center_btntext_margin_left">6dp</dimen>
+    <dimen name="person_center_btntext_margin_right">6dp</dimen>
+    <dimen name="person_account_exception_padding_left">12dp</dimen>
+    <dimen name="person_account_exception_padding_right">12dp</dimen>
+    <dimen name="person_account_exception_padding_top">7dp</dimen>
+    <dimen name="person_center_info_minheight">25dp</dimen>
+    <dimen name="person_center_btn_padding_left">10dp</dimen>
+    <dimen name="person_center_btn_padding_right">10dp</dimen>
+    <dimen name="person_center_btn_padding_top">6dp</dimen>
+    <dimen name="person_center_btn_padding_bottom">6dp</dimen>
+    <dimen name="person_center_btn_drawable_left">5dp</dimen>
+    <dimen name="person_center_btn_margin_right">10dp</dimen>
+    <dimen name="person_attention_margin_left">6dp</dimen>
+    <dimen name="person_attention_margin_right">6dp</dimen>
+    <dimen name="person_attention_margin_top">2dp</dimen>
+    <dimen name="person_attention_progress_margin_left">3dp</dimen>
+    <dimen name="person_usericon_padding_left">0dp</dimen>
+    <dimen name="person_usericon_padding_right">5dp</dimen>
+    <dimen name="person_usericon_padding_top">2dp</dimen>
+    <dimen name="person_usericon_padding_bottom">2dp</dimen>
+    <dimen name="person_intro_margin_top">4dp</dimen>
+    <dimen name="person_intro_margin_bottom">10dp</dimen>
+    <dimen name="person_bigbtn_height">94dp</dimen>
+    <dimen name="person_bigbtn_width">94dp</dimen>
+    <dimen name="person_bigbtn_margin">5dp</dimen>
+    <dimen name="person_bigbtn_margin_top">10dp</dimen>
+    <dimen name="person_bigbtnicon_margin_top">10dp</dimen>
+    <dimen name="person_bigbtntext_margin_top">5dp</dimen>
+    <dimen name="person_btnicon_margin_top">5dp</dimen>
+    <dimen name="person_bookmark_icon_margin_top">8dp</dimen>
+    <dimen name="person_bookmark_icon_margin_right">8dp</dimen>
+    <dimen name="person_fans_icon_margin_top">8dp</dimen>
+    <dimen name="person_fans_icon_margin_right">8dp</dimen>
+    <dimen name="person_notlogin_edge">7dp</dimen>
+    <dimen name="person_icon_width">16dip</dimen>
+    <dimen name="person_icon_height">16dip</dimen>
+    <dimen name="person_icon_margin">6dip</dimen>
+    <dimen name="person_name_font">@dimen/default_size_24</dimen>
+    <dimen name="person_centerbtn_font">@dimen/default_size_18</dimen>
+    <dimen name="person_bigbtntext_font">@dimen/default_size_18</dimen>
+    <!-- end of 个人中心 -->
+
+
+    <!-- FRS页 begin -->
+    <!-- FRS 普通吧头部的尺寸 -->
+    <dimen name="frs_header_height">140dip</dimen>
+    <dimen name="frs_header_padding_left">8dip</dimen>
+    <dimen name="frs_header_padding_right">9dip</dimen>
+    <dimen name="frs_header_padding_top">11dip</dimen>
+    <dimen name="frs_header_photo_width">81dip</dimen>
+    <dimen name="frs_header_photo_height">81dip</dimen>
+    <dimen name="frs_header_photo_margin_right">12dip</dimen>
+    <dimen name="frs_header_title_margin_right">6dip</dimen>
+    <dimen name="frs_header_badge_margin">6dip</dimen>
+    <dimen name="frs_header_badge_paddingTop">2dip</dimen>
+    <dimen name="frs_header_badge_paddingRight">2dip</dimen>
+    <dimen name="frs_header_badge_width">18dip</dimen>
+    <dimen name="frs_header_badge_height">18dip</dimen>
+    <dimen name="frs_header_info_margin_top">2dip</dimen>
+    <dimen name="frs_header_info_margin_bottom">8dip</dimen>
+    <dimen name="frs_header_info_txt_margin">9dip</dimen>
+    <dimen name="frs_header_info_txt_num_margin">4dip</dimen>
+    <dimen name="frs_header_btn_width">101dip</dimen>
+    <dimen name="frs_header_btn_height">30dip</dimen>
+    <dimen name="frs_header_btn_margin">6dip</dimen>
+    <dimen name="frs_header_btn_drawable_padding">2dip</dimen>
+    <dimen name="frs_header_attention_level_margin">2dip</dimen>
+    <dimen name="frs_header_attention_level_paddingTop">1dip</dimen>
+    <dimen name="frs_header_attention_done_padding">4dip</dimen>
+    <dimen name="frs_header_attention_done_marginTop">3dip</dimen>
+    <dimen name="frs_header_sign_progress_marginRight">6dip</dimen>
+    <dimen name="frs_header_exp_height">44dip</dimen>
+    <dimen name="frs_header_exp_text_paddingTop">12dip</dimen>
+    <dimen name="frs_header_divider_height">1dip</dimen>
+    <dimen name="frs_header_divider_margin_top">8dip</dimen>
+    <dimen name="frs_header_groups_height">38dip</dimen>
+    <dimen name="frs_header_groups_icon_margin">6dip</dimen>
+    <dimen name="frs_header_groups_txt_margin">4dip</dimen>
+    <dimen name="frs_header_groups_arrow_padding">6dip</dimen>
+    <dimen name="frs_header_tag_paddingHorizontal">6dip</dimen>
+    <dimen name="frs_header_tag_paddingVertical">2dip</dimen>
+    <dimen name="frs_header_title_text">@dimen/default_size_24</dimen>
+    <dimen name="frs_header_tag_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_header_info_text">@dimen/default_size_18</dimen>
+    <dimen name="frs_header_info_num_text">@dimen/default_size_21</dimen>
+    <dimen name="frs_header_btn_normal_text">@dimen/default_size_20</dimen>
+    <dimen name="frs_header_attention_done_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_header_level_text">@dimen/default_size_14</dimen>
+    <dimen name="frs_header_exp_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_header_groups_text">@dimen/default_size_21</dimen>
+
+    <!-- FRS 明星吧吧名片尺寸 -->
+    <dimen name="frs_starheader_paddingLeft">7dip</dimen>
+    <dimen name="frs_starheader_paddingRight">7dip</dimen>
+    <dimen name="frs_starheader_photo_width">81dip</dimen>
+    <dimen name="frs_starheader_photo_height">81dip</dimen>
+    <dimen name="frs_starheader_photo_padding">2dip</dimen>
+    <dimen name="frs_starheader_photo_layout_width">83dip</dimen>
+    <dimen name="frs_starheader_photo_layout_height">83dip</dimen>
+    <dimen name="frs_starheader_photo_marginTop">-35dip</dimen>
+    <dimen name="frs_starheader_photo_marginRight">8dip</dimen>
+    <dimen name="frs_starheader_photo_marginBottom">10dip</dimen>
+    <dimen name="frs_starheader_title_marginTop">6dip</dimen>
+    <dimen name="frs_starheader_title_marginBottom">7dip</dimen>
+    <dimen name="frs_starheader_badge_margin">4dip</dimen>
+    <dimen name="frs_starheader_badge_paddingLeft">4dip</dimen>
+    <dimen name="frs_starheader_badge_width">18dip</dimen>
+    <dimen name="frs_starheader_badge_height">18dip</dimen>
+    <dimen name="frs_starheader_info_txt_margin">9dip</dimen>
+    <dimen name="frs_starheader_info_txt_num_margin">4dip</dimen>
+    <dimen name="frs_starheader_btn_width">103dip</dimen>
+    <dimen name="frs_starheader_btn_height">31dip</dimen>
+    <dimen name="frs_starheader_btn_margin">7dip</dimen>
+    <dimen name="frs_starheader_fan_bottom_marginLeft">2dip</dimen>
+    <dimen name="frs_starheader_get_fans_width">80dip</dimen>
+    <dimen name="frs_starheader_get_fans_height">31dip</dimen>
+    <dimen name="frs_starheader_get_fans_marginRight">10dip</dimen>
+    <dimen name="frs_starheader_tag_marginRight">8dip</dimen>
+    <dimen name="frs_starheader_fans_icon_marginTop">1dip</dimen>
+    <dimen name="frs_starheader_fans_icon_marginRight">1dip</dimen>
+    <dimen name="frs_starheader_tag_paddingHorizontal">6dip</dimen>
+    <dimen name="frs_starheader_tag_paddingVertical">2dip</dimen>
+    <dimen name="frs_starheader_title_text">@dimen/default_size_24</dimen>
+    <dimen name="frs_starheader_tag_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_starheader_info_text">@dimen/default_size_18</dimen>
+    <dimen name="frs_starheader_info_num_text">@dimen/default_size_21</dimen>
+    <dimen name="frs_starheader_btn_normal_text">@dimen/default_size_20</dimen>
+    <dimen name="frs_starheader_attention_done_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_starheader_level_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_starheader_exp_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_starheader_groups_text">@dimen/default_size_21</dimen>
+    <dimen name="frs_starheader_add_fan_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_starheader_fan_num_text">@dimen/default_size_18</dimen>
+    <dimen name="frs_starheader_countdown_text">@dimen/default_size_15</dimen>
+    <dimen name="frs_starheader_countdown_num_text">@dimen/default_size_18</dimen>
+
+    <!-- FRS 置顶贴部分的尺寸 -->
+    <dimen name="frs_top_padding">6dip</dimen>
+    <dimen name="frs_top_icon_margin">6dip</dimen>
+    <dimen name="frs_top_item_height">32dip</dimen>
+    <dimen name="frs_top_item_divider">1dip</dimen>
+    <dimen name="frs_top_margin_bottom">6dip</dimen>
+    <dimen name="frs_top_text">@dimen/default_size_18</dimen>
+    <!-- frs页 加载更多 -->
+    <dimen name="frs_listmore_padding">6dip</dimen>
+    <dimen name="frs_listmore_height">40dip</dimen>
+    <dimen name="frs_listmore_margin_left_right">34dip</dimen>
+    <dimen name="frs_listmore_progressbar_margin_left">3dip</dimen>
+    <dimen name="frs_commenticon_margin_top">7dip</dimen>
+    <dimen name="frs_listmore_text">@dimen/default_size_21</dimen>
+    <!-- frs页侧边栏 -->
+    <dimen name="frs_slidebar_top_height">44dip</dimen>
+    <dimen name="frs_slidebar_top_margin_bottom">5dip</dimen>
+    <dimen name="frs_slidebar_top_margin_right">7dip</dimen>
+    <dimen name="frs_slidebar_top_margin_top">9dip</dimen>
+    <dimen name="frs_slidebar_top_btn_minheight">32dip</dimen>
+    <dimen name="frs_slidebar_top_btn_minwidth">88dip</dimen>
+    <dimen name="frs_slidebar_top_text_drawablepadding">6dip</dimen>
+    <dimen name="frs_slidebar_top_text_padding">5dip</dimen>
+    <dimen name="frs_slidebar_title_height">27dip</dimen>
+    <dimen name="frs_slidebar_content_height">45dip</dimen>
+    <dimen name="frs_slidebar_padding_left">16dip</dimen>
+    <dimen name="frs_slidebar_line_height">1dip</dimen>
+    <dimen name="frs_slidebar_switch_padding_right">14dip</dimen>
+    <dimen name="frs_slidebar_message_margin_left">8dip</dimen>
+    <dimen name="frs_slidebar_message_width">18dip</dimen>
+    <dimen name="frs_slidebar_message_height">18dip</dimen>
+    <dimen name="frs_sliderbar_text">@dimen/default_size_24</dimen>
+    <dimen name="frs_sliderbar_title_text">@dimen/default_size_20</dimen>
+    <dimen name="frs_sliderbar_top_text">@dimen/default_size_16</dimen>
+    <dimen name="frs_sliderbar_message_text">@dimen/default_size_18</dimen>
+    <!-- frs页精品区 -->
+    <dimen name="frs_goodheader_padding">10dip</dimen>
+    <dimen name="frs_goodheader_text_padding">12dip</dimen>
+    <dimen name="frs_goodheader_text_height">35dip</dimen>
+    <dimen name="frs_goodheader_text_width">78dip</dimen>
+    <dimen name="frs_goodheader_line_right_width">1dip</dimen>
+    <dimen name="frs_goodheader_line_right_height">22dip</dimen>
+    <dimen name="frs_goodheader_line_bottom_height">1dip</dimen>
+    <dimen name="frs_goodheader_line_bottom_s_height">2dip</dimen>
+    <dimen name="frs_goodheader_line_bottom_s_width">50dip</dimen>
+    <dimen name="frs_goodheader_text">@dimen/default_size_18</dimen>
+    <!-- frs页用户icon -->
+    <dimen name="frs_icon_width">12dip</dimen>
+    <dimen name="frs_icon_height">12dip</dimen>
+    <dimen name="frs_icon_margin">6dip</dimen>
+  	
+  	<!-- frs页刷新按钮 -->
+  	<dimen name="frs_refresh_width">50dip</dimen>
+  	<dimen name="frs_refresh_height">50dip</dimen>
+    <!-- FRS页 end -->
+
+
+    <!-- 消息 -->
+    <dimen name="chatlist_item_photo_container_width">82dip</dimen>
+    <dimen name="chatlist_item_photo_container_height">82dip</dimen>
+    <dimen name="chatlist_item_photo_width">62dip</dimen>
+    <dimen name="chatlist_item_photo_height">62dip</dimen>
+    <dimen name="chatlist_item_right_padding">10dip</dimen>
+    <dimen name="chatlist_item_name_margintop">14dip</dimen>
+    <dimen name="chatlist_item_name_marginbottom">4dip</dimen>
+    <dimen name="chatlist_item_bell_top">25dip</dimen>
+    <!-- 消息 -->
+
+
+    <!-- pb页  header -->
+    <dimen name="pb_header_padding_top">14dip</dimen>
+    <dimen name="pb_header_border_margin_top">10dip</dimen>
+    <dimen name="pb_header_padding_left">10dip</dimen>
+    <dimen name="pb_header_padding_right">10dip</dimen>
+    <dimen name="pb_header_border_bottom">1dp</dimen>
+    <dimen name="pb_header_gofrs_button_width">64dip</dimen>
+    <dimen name="pb_header_gofrs_button_height">20dip</dimen>
+    <dimen name="pb_header_title_margin_bottom">14dip</dimen>
+    <dimen name="pb_header_little_icon_drawable_padding">4dip</dimen>
+    <dimen name="pb_header_weightlayout_height">1dip</dimen>
+    <dimen name="pb_header_time_padding_right">5dip</dimen>
+    <dimen name="Pb_header_managebutton_margin_left">14dip</dimen>
+    <dimen name="pb_header_bawubutton_padding_bottom">8dip</dimen>
+    <dimen name="pb_header_bawubutton_padding_top">8dip</dimen>
+    <dimen name="pb_header_line2_width">1dip</dimen>
+    <dimen name="pb_header_littleicon_text_size">10sp</dimen>
+    <dimen name="pb_header_bawu_distance">16dip</dimen>
+    <dimen name="pb_header_bawu_button_height">32dip</dimen>
+    <dimen name="pb_header_long_button_height">35dip</dimen>
+
+    <!-- pb list item -->
+    <dimen name="pb_listview_fadingedge_length">0dip</dimen>
+    <dimen name="pb_hold_width">1dip</dimen>
+    <dimen name="pb_hold_margin_bottom">-1dip</dimen>
+
+    <!-- pb更多操作 -->
+    <dimen name="pb_more_layout_height">80dip</dimen>
+    <dimen name="pb_more_button_padding_top">16dip</dimen>
+    <dimen name="pb_more_button_padding_bottom">8dip</dimen>	
+    <dimen name="pb_more_button_drawable_padding">12dip</dimen>
+    <dimen name="pb_more_reommend_bar_line_width">2dip</dimen>
+    <dimen name="pb_more_text_size">14sp</dimen>
+    <dimen name="pb_list_item_padding_top">14dip</dimen>
+    <dimen name="pb_list_item_padding_left">15dip</dimen>
+    <dimen name="pb_list_item_padding_right">15dip</dimen>
+    <dimen name="pb_list_item_padding_bottom">3dip</dimen>
+    <dimen name="pb_list_item_headerphoto_width">37dip</dimen>
+    <dimen name="pb_list_item_headerphoto_height">37dip</dimen>
+    <dimen name="pb_list_item_headerphoto_margin_right">8dip</dimen>
+    <dimen name="pb_list_item_post_time_margin_top">4dip</dimen>
+    <dimen name="pb_list_item_icon_distance">4dip</dimen>
+    <dimen name="pb_list_item_textdrawable_padding">4dip</dimen>
+    <dimen name="pb_list_item_icon_width">16dip</dimen>
+    <dimen name="pb_list_item_icon_height">16dip</dimen>
+    <dimen name="pb_list_item_column_spacing_left">8dp</dimen>
+    <dimen name="pb_list_item_column_spacing_right">4dp</dimen>
+    <dimen name="pb_list_item_user_layout_margin_top">1dip</dimen>
+    <dimen name="pb_list_item_userrank_padding_bottom">1dip</dimen>
+    <dimen name="pb_list_item_usericonbox_padding_top">2dip</dimen>
+    <dimen name="pb_list_item_floorowner_height">16dip</dimen>
+    <dimen name="pb_list_item_floorowner_margin_top">2dip</dimen>
+    <dimen name="pb_list_item_floor_padding_left">4dip</dimen>
+    <dimen name="pb_list_item_floor_padding_right">0dip</dimen>
+    <dimen name="pb_list_item_floor_margin_top">1dip</dimen>
+    <dimen name="pb_list_item_richtext_margin_top">2dip</dimen>
+    <dimen name="pb_list_item_richtext_segment_margin">6dip</dimen>
+    <dimen name="pb_list_item_bottomcontainer_padding_left">6dip</dimen>
+    <dimen name="pb_list_item_bottomcontainer_padding_right">6dip</dimen>
+    <dimen name="pb_list_item_bottomcontainer_padding_bottom">0dip</dimen>
+    <dimen name="pb_list_item_replybutton_margin_left">10dip</dimen>
+    <dimen name="pb_list_item_replybutton_drawle_padding">3dip</dimen>
+    <dimen name="pb_list_item_managebutton_margin_left">10dip</dimen>
+    <dimen name="pb_list_item_subpb_padding_left">6dip</dimen>
+    <dimen name="pb_list_item_subpb_padding_right">6dip</dimen>
+    <dimen name="pb_list_item_subpb_padding_top">6dip</dimen>
+    <dimen name="pb_list_item_subpb_padding_bottom">6dip</dimen>
+    <dimen name="pb_list_item_border_bottom_height">1dip</dimen>
+    <dimen name="pb_list_item_border_bottom_margin_top">14dip</dimen>
+    <dimen name="pb_list_item_floornumber_padding_right">3dip</dimen>
+    <dimen name="pb_list_item_header_margin_right">10dip</dimen>
+
+    <!-- pb页列表加载更多的视图 -->
+    <dimen name="pb_list_load_more_height">47dip</dimen>
+    <dimen name="pb_list_load_more_text_padding_top">4dip</dimen>
+    <dimen name="pb_list_load_more_text_padding_bottom">4dip</dimen>
+    <dimen name="pb_list_load_more_image_margin_left">4dip</dimen>
+    <dimen name="pb_list_load_more_progress_margin_left">4dip</dimen>
+
+    <!-- 楼中楼列表 -->
+    <dimen name="subpb_list_item_minheight">40dip</dimen>
+    <dimen name="subpb_body_margin_left">15dip</dimen>
+    <dimen name="subpb_body_margin_right">15dip</dimen>
+    <dimen name="subpb_body_padding_bottom">8dip</dimen>
+    <dimen name="subpb_packup_text_height">43dip</dimen>
+    <dimen name="subpb_packup_text_drawable_padding">4dip</dimen>
+    <dimen name="subpb_packup_text_size">12sp</dimen>
+    <dimen name="subpb_header_user_layout_margin_left">10dip</dimen>
+    <dimen name="subpb_header_weight_layout_height">1dip</dimen>
+    <dimen name="subpb_header_bottom_layout_height">10dip</dimen>
+    <dimen name="subpb_listitem_padding_top">12dip</dimen>
+    <dimen name="subpb_listitem_padding_bottom">12dip</dimen>
+    <dimen name="subpb_listitem_margin_left">6dip</dimen>
+    <dimen name="subpb_listitem_margin_right">6dip</dimen>
+    <dimen name="subpb_listitem_packup_min_height">48dip</dimen>
+    <dimen name="subpb_listitem_packup_divider_height">2dip</dimen>
+    <dimen name="subpb_listitem_loadmore_padding_top">10dip</dimen>
+    <dimen name="subpb_listitem_loadmore_padding_bottom">10dip</dimen>
+    <dimen name="subpb_listitem_loadmore_text_size">12sp</dimen>
+    <dimen name="subpb_listitem_time_text_size">10sp</dimen>
+    <dimen name="subpb_reply_loadprevious_margin_top">20dip</dimen>
+    <dimen name="subpb_reply_loadprevious_height">48dip</dimen>
+    <dimen name="subpb_reply_loadPrevious_padding_top">20dip</dimen>
+    <dimen name="subpb_reply_loadPrevious_padding_bottom">20dip</dimen>
+    <dimen name="subpb_header_floorowner_margin_top">0dip</dimen>
+    <dimen name="subpb_header_usericon_padding_top">1dip</dimen>
+
+    <!-- pb 发贴框 -->
+    <dimen name="pb_editor_edittext_height">34dip</dimen>
+    <dimen name="pb_editor_edittext_margin_left">4dip</dimen>
+    <dimen name="pb_editor_edittext_padding_left">8dip</dimen>
+    <dimen name="pb_editor_edittext_padding_right">8dip</dimen>
+    <dimen name="pb_editor_edittext_textsize">14sp</dimen>
+    <dimen name="pb_editor_postbutton_margin_left">4dip</dimen>
+    <dimen name="pb_editor_postbutton_width">42dip</dimen>
+    <dimen name="pb_editor_postbutton_height">34dip</dimen>
+    <dimen name="pb_editor_postbutton_text_size">14sp</dimen>
+    <dimen name="pb_editor_button_width">34dip</dimen>
+    <dimen name="pb_editor_button_height">34dip</dimen>
+    <dimen name="pb_editor_button_distance">4dip</dimen>
+    <dimen name="pb_editor_line1_padding_top">8dip</dimen>
+    <dimen name="pb_editor_line1_padding_bottom">8dip</dimen>
+    <dimen name="pb_editor_line1_padding_left">4dip</dimen>
+    <dimen name="pb_editor_line1_padding_right">4dip</dimen>
+    <dimen name="pb_editor_line2_padding_top">6dip</dimen>
+    <dimen name="pb_editor_line2_padding_bottom">6dip</dimen>
+    <dimen name="pb_editor_imageupload_padding_top">15dip</dimen>
+    <dimen name="pb_editor_imageupload_paddinb_bottom">80dip</dimen>
+    <dimen name="pb_editor_imageupload_button_height">40dip</dimen>
+    <dimen name="pb_editor_imageupload_button_min_width">135dip</dimen>
+    <dimen name="pb_editor_imageupload_button_text_size">15sp</dimen>
+    <dimen name="pb_editor_imageupload_sideweight_min_width">20dip</dimen>
+    <dimen name="pb_editor_imageupload_middleweight_min_width">10dip</dimen>
+    <dimen name="pb_editor_horizontalscroll_height">60dip</dimen>
+    <dimen name="pb_editor_horizontalscroll_margin_top">80dip</dimen>
+    <dimen name="pb_editor_imageupload_height">220dip</dimen>
+    <dimen name="pb_editor_faceview_spacing_width">50dip</dimen>
+    <dimen name="pb_editor_faceview_height">220dip</dimen>
+    <dimen name="pb_editor_faceview_horizontal_spacing">5dip</dimen>
+    <dimen name="pb_editor_faceview_vertical_spacing">5dip</dimen>
+    <dimen name="pb_editor_recordview_height">220dip</dimen>
+    <dimen name="pb_editor_extern_tool_height">46dip</dimen>
+
+    <!-- 主贴发贴框 -->
+    <dimen name="write_tool_button_width">34dip</dimen>
+    <dimen name="write_tool_button_height">34dip</dimen>
+    <dimen name="write_tool_button_distance">16dip</dimen>
+    <dimen name="write_tool_button_container_height">50dip</dimen>
+    <dimen name="write_tool_image_preview_padding_left">8dip</dimen>
+    <dimen name="write_tool_buton_container_padding_left">12dip</dimen>
+
+    <!-- 图片FRS页面 -->
+    <dimen name="frs_image_block">28dip</dimen>
+    <dimen name="voice_play_bnt_text_size_0">18sp</dimen>
+    <dimen name="voice_play_bnt_text_size_1">14sp</dimen>
+    <dimen name="voice_play_bnt_width_0">92dp</dimen>
+    <dimen name="voice_play_bnt_height_0">38dp</dimen>
+    <dimen name="voice_play_bnt_width_1">75dp</dimen>
+    <dimen name="voice_play_bnt_height_1">32dp</dimen>
+    <dimen name="voice_play_bnt_padding">18dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 二维码页面 -->
+    <dimen name="bar_code_tip_text">@dimen/default_size_22</dimen>
+    <dimen name="bar_code_tip_text_margin_top">23dp</dimen>
+    <dimen name="bar_code_center_rect_size">210dp</dimen>
+
+    <!-- 进群页面的UI -->
+    <dimen name="enter_forum_header">@dimen/default_size_22</dimen>
+    <!-- im的群列表 -->
+
+    <dimen name="im_group_headimgview_width">79dip</dimen>
+    <dimen name="im_group_headimgview_height">79dip</dimen>
+    <dimen name="im_group_headimgview_padding">9dip</dimen>
+    <dimen name="im_group_txt_margin_ver">9dip</dimen>
+    <dimen name="im_group_txt_padding_top">1dip</dimen>
+    <dimen name="im_group_txt_right_margin">8dip</dimen>
+    <dimen name="im_group_txt_star_left_margin">5dip</dimen>
+    <dimen name="im_group_txt_star_margin">3dip</dimen>
+    <dimen name="im_group_item_divier_height">1dip</dimen>
+    <dimen name="im_group_item_creater_icon_padding">2dip</dimen>
+    <dimen name="im_group_item_creater_icon_padding_ver">4dip</dimen>
+    <dimen name="im_group_item_creater_icon_padding_hol">3dip</dimen>
+    <dimen name="im_group_item_group_name">@dimen/default_size_24</dimen>
+    <dimen name="im_group_item_group_num">@dimen/default_size_20</dimen>
+    <dimen name="im_group_item_group_desc">@dimen/default_size_20</dimen>
+    <dimen name="im_group_item_creator_size">@dimen/default_size_16</dimen>
+    <dimen name="im_group_line">1dip</dimen>
+    <dimen name="im_group_line_height">23dip</dimen>
+    <dimen name="im_group_line_left">8dp</dimen>
+    <dimen name="im_group_line_right">6dip</dimen>
+    
+    <dimen name="enter_group_my_forum">@dimen/default_size_18</dimen>
+
+    <!-- 群资料->修改群名称、修改群介绍部分用到的 -->
+    <dimen name="im_group_update_name_input_height">36dip</dimen>
+    <dimen name="im_group_update_name_input_paddingleft">10dip</dimen>
+    <dimen name="im_group_update_name_input_delbtn_marginright">10dip</dimen>
+    <dimen name="im_group_update_info_input_height">90dip</dimen>
+    <dimen name="im_group_update_info_input_paddingleft">10dip</dimen>
+    <dimen name="im_group_update_info_input_paddingtop">10dip</dimen>
+
+	<dimen name="im_create_group_bigbtn_height">40dip</dimen>
+	<dimen name="im_create_group_grouphead_width">67dip</dimen>
+	<dimen name="im_create_group_grouphead_height">67dip</dimen>
+	
+	
+	<!-- 聊天页 -->
+	<dimen name="im_msg_more_btns_width">70dip</dimen>
+	<dimen name="im_msg_more_btns_height">70dip</dimen>
+	<dimen name="im_msg_more_btns_marginleft">4dip</dimen>
+	<dimen name="im_msg_more_btns_marginright">4dip</dimen>
+	<dimen name="im_msg_more_btns_paddingtop">12dip</dimen>
+	<dimen name="im_msg_voice_layer_width">160dip</dimen>
+	<dimen name="im_msg_voice_layer_height">160dip</dimen>
+	<dimen name="im_msg_last_msg_layer_height">32dip</dimen>
+	<dimen name="im_msg_last_msg_layer_paddingleft">16dip</dimen>
+	<dimen name="im_msg_last_msg_layer_paddingright">16dip</dimen>
+	<dimen name="im_msg_btn_send_voice_height">38dip</dimen>
+	<dimen name="im_msg_more_layer_height">225dip</dimen>
+	<dimen name="im_msg_face_layer_height">200dip</dimen>
+	<dimen name="im_msg_face_layer_points_margintop">12dip</dimen>
+	<dimen name="im_msg_send_text_min_height">38dip</dimen>
+	<dimen name="im_msg_send_text_paddingbottom">3dip</dimen>
+	<dimen name="im_msg_send_text_paddingtop">3dip</dimen>
+	<dimen name="im_msg_btn_send_height">36dip</dimen>
+	<dimen name="im_msg_btn_send_marginleft">4dip</dimen>
+	<dimen name="im_msg_btn_send_paddingleft">12dip</dimen>
+	<dimen name="im_msg_btn_send_paddingright">12dip</dimen>
+	<dimen name="im_msg_send_btns_marginleft">4dip</dimen>
+	<dimen name="im_msg_send_btns_marginright">4dip</dimen>
+	<dimen name="im_msg_tempview_height">1dip</dimen>
+	<dimen name="im_msg_tempview_maginbottom">-2dip</dimen>
+	 <!--  im群等级页 -->
+    <dimen name="im_grouplevel_margin_top">24dip</dimen>
+    <dimen name="im_grouplevel_margin_bottom">17dip</dimen>
+    <dimen name="im_grouplevel_big_star_margin_right">5dip</dimen>
+    <dimen name="im_grouplevel_current_level_margin_right">7dip</dimen>
+    
+    <dimen name="im_grouplevel_active_day_margin_top">14dip</dimen>
+    <dimen name="im_grouplevel_active_day_margin_right">7dip</dimen>
+    <dimen name="im_grouplevel_active_condition_margin_top">14dip</dimen>
+    <dimen name="im_grouplevel_active_condition_margin_bottom">24dip</dimen>
+    <dimen name="im_grouplevel_active_day_progress_width">149dip</dimen>
+    <dimen name="im_grouplevel_active_day_progress_height">14dip</dimen>
+    
+    <dimen name="im_grouplevel_explain_margin_top">11dip</dimen>
+    <dimen name="im_grouplevel_explain_margin_bottom">14dip</dimen>
+    <dimen name="im_grouplevel_explain_line_margin_left">14dip</dimen>
+    <dimen name="im_grouplevel_explain_line_margin_right">8dip</dimen>
+    
+    <dimen name="im_grouplevel_explain_grid_width">72dip</dimen>
+    <dimen name="im_grouplevel_explain_grid_height">44dip</dimen>
+    <dimen name="im_grouplevel_explain_grid_star1_magin_left">14dip</dimen>
+    <dimen name="im_grouplevel_explain_grid_star2_magin_left">4dip</dimen>
+    <dimen name="im_grouplevel_explain_grid_members_limit_marign_right">14dip</dimen>
+    <dimen name="im_grouplevel_explain_grid_spacing">1dip</dimen>
+    
+    
+
+    <!-- pb页用户icon -->
+    <dimen name="pb_icon_width">16dip</dimen>
+    <dimen name="pb_icon_height">16dip</dimen>
+    <dimen name="pb_icon_margin">2dip</dimen>
+
+    <!-- 通用button样式 -->
+    <dimen name="pb_drawable_text_min_width">50dip</dimen>
+    <dimen name="pb_drawable_text_min_height">20dip</dimen>
+    <dimen name="pb_drawable_text_drawable_padding">3dip</dimen>
+    
+    <dimen name="enter_forum_head_hol">10dip</dimen>
+    <dimen name="enter_forum_head_arrow_right">7dip</dimen>
+    <dimen name="enter_forum_header_image_ver">20dip</dimen>
+    <dimen name="enter_forum_header_image_right">7dip</dimen>
+    
+    <dimen name="enter_forum_nearby_title_hei">34dip</dimen>
+
+</resources>

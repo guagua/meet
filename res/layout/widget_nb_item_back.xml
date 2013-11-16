@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部导航栏：返回按钮 -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigationBarGoBack"
+    style="@style/navi_btn_bg_comm"
+    android:scaleType="center"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/title_icon_bg"
+    android:src="@drawable/icon_return_n" >
+
+</ImageView>
