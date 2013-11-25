@@ -13,9 +13,10 @@ import com.baidu.meet.network.NetWork;
 import com.baidu.meet.util.BdUtilHelper;
 import com.baidu.meet.util.BitmapHelper;
 import com.baidu.meet.util.FileHelper;
-import com.baidu.meet.util.NavigationBar;
 import com.baidu.meet.util.TiebaPrepareImageService;
 import com.baidu.meet.util.UtilHelper;
+import com.baidu.meet.view.EditHeadImageView;
+import com.baidu.meet.view.NavigationBar;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -270,7 +271,6 @@ public class EditHeadActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-//				RegisterActivity.startAcitivity(EditHeadActivity.this);
 				
 				String filename = Config.PERSON_HEAD_FILE;
 
@@ -283,6 +283,8 @@ public class EditHeadActivity extends Activity {
 						return;
 					}
 				}
+				
+				RegisterActivity.startAcitivity(EditHeadActivity.this);
 
 //				if (mEditType == PERSON_TYPE) {
 //					modifyHead();

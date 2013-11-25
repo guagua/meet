@@ -1,16 +1,13 @@
 package com.baidu.meet;
 
-import com.baidu.meet.config.Config;
 import com.baidu.meet.config.RequestResponseCode;
-import com.baidu.meet.imageLoader.AsyncImageLoader;
 import com.baidu.meet.imageLoader.AsyncImageLoader.ImageCallback;
 import com.baidu.meet.model.BaseLoadDataCallBack;
 import com.baidu.meet.model.RegisterModel;
 import com.baidu.meet.register.EditHeadActivity;
-import com.baidu.meet.register.RegisterActivity;
-import com.baidu.meet.util.NavigationBar;
 import com.baidu.meet.util.UtilHelper;
 import com.baidu.meet.util.WriteUtil;
+import com.baidu.meet.view.NavigationBar;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -18,12 +15,10 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class LogoActivity extends Activity {
 	private RegisterModel mRegisterModel = null;

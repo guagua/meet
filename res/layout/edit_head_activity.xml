@@ -6,15 +6,14 @@
     android:background="#ff1e1e1e"
     android:orientation="vertical" >
 
-    <com.baidu.meet.register.EditHeadImageView
+    <com.baidu.meet.view.EditHeadImageView
         android:id="@+id/image"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:clickable="true"
-        android:scrollbars="vertical" >
-    </com.baidu.meet.register.EditHeadImageView>
+        android:scrollbars="vertical" />
     
-    <com.baidu.meet.util.NavigationBar
+    <com.baidu.meet.view.NavigationBar
         android:id="@+id/navigation_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
