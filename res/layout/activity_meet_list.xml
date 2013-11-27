@@ -15,7 +15,7 @@
     
     <com.baidu.meet.ListView.BdListView
         android:layout_below="@id/navigation_bar"
-        android:id="@+id/chat_list_content"
+        android:id="@+id/meet_list_content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:cacheColorHint="@android:color/transparent"

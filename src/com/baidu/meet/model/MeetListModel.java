@@ -10,14 +10,18 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.baidu.meet.asyncTask.BdAsyncTask;
 import com.baidu.meet.asyncTask.BdAsyncTaskPriority;
+import com.baidu.meet.config.Config;
+import com.baidu.meet.log.MeetLog;
+import com.baidu.meet.network.NetWork;
 import com.baidu.meet.talk.RecentChatFriendData;
 
 /**
  * @author zhangdongning 聊天列表页model，管理最近聊天人资料
  */
 
-public class ChatListModel extends BaseModel {
+public class MeetListModel extends BaseModel {
 
 	/** 群消息 */
 	public static final int TYPE_GROUP_MSG = 1;
@@ -238,12 +242,37 @@ public class ChatListModel extends BaseModel {
 	 */
 	public void parserJson(String data) {
 		try {
-			JSONObject json = new JSONObject(data);
-			parserJson(json);
+//			JSONObject json = new JSONObject(data);
+//			parserJson(json);
+			//构造虚假数据，测试用
+			addFadeData();
+			
 		} catch (Exception ex) {
 		}
 	}
 	
+	private void addFadeData() {
+		hasMore = true;
+		long localTime = System.currentTimeMillis();
+		mRecentPrivateChatData = new ArrayList<RecentChatFriendData>();
+		for (int i = 0; i < 15; i++) {
+			RecentChatFriendData temp = new RecentChatFriendData();
+			temp.setOwnerId(mUserId);
+			temp.setFriendId("222");
+			temp.setFriendName("guagua" + String.valueOf(i));
+			temp.setServerTime(localTime);
+			temp.setUnReadCount(5);
+			temp.setFriendPortrait("http://c.hiphotos.bdimg.com/album/s%3D680%3Bq%3D90/sign=24fcc2e0b8389b503cffe35ab50e94e0/b64543a98226cffc0c3a674cb8014a90f603ea38.jpg");
+			temp.setLocalTime(localTime);
+			// 考虑到以后摘要信息会增加，目前把整个内容存储，使用时再解析，可以防止后期不动底层
+			String msg = "hahahah";
+			if (msg != null && msg.length() >= 1) {
+				temp.setMsgContent(msg);
+			}
+			mRecentPrivateChatData.add(temp);
+		}
+	}
+
 	/**
 	 * 解析并保存
 	 * 
@@ -271,7 +300,7 @@ public class ChatListModel extends BaseModel {
 						temp.setOwnerId(mUserId);
 						temp.setFriendId(item.optString("user_id"));
 						temp.setFriendName(item.optString("user_name"));
-						temp.setStatus(ChatMessageData.STATUS_RECEIVED);
+//						temp.setStatus(ChatMessageData.STATUS_RECEIVED);
 						temp.setServerTime(item.optLong("time") * 1000);
 						temp.setUnReadCount(item.optInt("unread_count"));
 						temp.setFriendPortrait(item.optString("portrait"));
@@ -291,12 +320,13 @@ public class ChatListModel extends BaseModel {
 
 	// 从本地服务获取缓存数据
 	public List<RecentChatFriendData> getChatStorageData(String userId) {
-		mRecentChatData = ChatStorageService.getService()
-				.listRecentChatFriends(userId);
-		for (RecentChatFriendData data : mRecentChatData) {
-			data.setUnReadCount(0);
-		}
-		return mRecentChatData;
+//		mRecentChatData = ChatStorageService.getService()
+//				.listRecentChatFriends(userId);
+//		for (RecentChatFriendData data : mRecentChatData) {
+//			data.setUnReadCount(0);
+//		}
+//		return mRecentChatData;
+		return null;
 	}
 
 	public void setHasMore(boolean hasMore) {
@@ -345,28 +375,28 @@ public class ChatListModel extends BaseModel {
 			try {
 
 				mNetwork = new NetWork(Config.SERVER_ADDRESS
-						+ Config.RECENT_CHAT_LIST);
+						+ Config.GET_LOVELIST);
 
-				mNetwork.setIsNeedTbs(true);
 				mNetwork.addPostData("user_id", mUserId);
 				mNetwork.addPostData("pn", mPn);
 				mNetwork.addPostData("rn", mRn);
 
 				String data = null;
-
-				data = mNetwork.postNetData();
-				if (mNetwork.isRequestSuccess() && data != null) {
-					parserJson(data);
-					// 返回数据成功时才缓存 并且只存第一页数据
-					if ((getErrNo() == 0 && mPn.equals("1"))
-							&& mRecentPrivateChatData != null) {
-						processGroupMsgAndrPrivateChat();
-					}
-					return true;
-				}
+				parserJson(data);
+				return true;
+//				data = mNetwork.postNetData();
+//				if (mNetwork.isRequestSuccess() && data != null) {
+//					parserJson(data);
+//					// 返回数据成功时才缓存 并且只存第一页数据
+//					if ((getErrNo() == 0 && mPn.equals("1"))
+//							&& mRecentPrivateChatData != null) {
+////						processGroupMsgAndrPrivateChat();
+//					}
+//					return true;
+//				}
 
 			} catch (Exception ex) {
-				TiebaLog.e(this.getClass().getName(), "doInBackground",
+				MeetLog.e(this.getClass().getName(), "doInBackground",
 						ex.getMessage());
 			}
 			return false;
@@ -405,27 +435,6 @@ public class ChatListModel extends BaseModel {
 		this.mRecentPrivateChatData = mRecentPrivateChatData;
 	}
 
-	public void processGroupMsgOnly(final ISingleRunnableCallback<Void> callback) {
-		ChatNotifyManager.getInstance().refreshGroupMsgList(false,
-				new ISingleRunnableCallback<Void>() {
-
-					@Override
-					public void onReturnDataInUI(Void result) {
-						LinkedList<RecentChatFriendData> datas = ChatNotifyManager
-								.getInstance().getRecentGroupChat();
-						if (null == datas) {
-							return;
-						}
-
-						mRecentGroupChatData.clear();
-						mRecentGroupChatData.addAll(datas);
-						resetData();
-						if (null != callback) {
-							callback.onReturnDataInUI(null);
-						}
-					}
-				});
-	}
 
 	private synchronized void resetData() {
 		mRecentChatData.clear();
@@ -434,33 +443,6 @@ public class ChatListModel extends BaseModel {
 		}
 		if (null != mRecentPrivateChatData) {
 			mRecentChatData.addAll(mRecentPrivateChatData);
-		}
-
-		if (ChatNotifyManager.getInstance().isShowValidate()) {
-			RecentChatFriendData validate = ChatNotifyManager.getInstance()
-					.getValidateData();
-			if (null != validate) {
-				mRecentChatData.add(validate);
-			} else {
-				ChatNotifyManager.processValidate();
-				validate = ChatNotifyManager.getInstance().getValidateData();
-				if (null != validate) {
-					mRecentChatData.add(validate);
-				}
-			}
-		}
-		if (ChatNotifyManager.getInstance().isShowUpdate()) {
-			RecentChatFriendData updates = ChatNotifyManager.getInstance()
-					.getUpdatesData();
-			if (null != updates) {
-				mRecentChatData.add(updates);
-			} else {
-				ChatNotifyManager.processGroupUpdateEvent(false);
-				updates = ChatNotifyManager.getInstance().getUpdatesData();
-				if (null != updates) {
-					mRecentChatData.add(updates);
-				}
-			}
 		}
 
 		Collections.sort(mRecentChatData,
@@ -483,25 +465,6 @@ public class ChatListModel extends BaseModel {
 				});
 	}
 
-	private void processGroupMsgAndrPrivateChat() {
-		BdLog.d(" get recent list private");
-
-		if (null == mRecentPrivateChatData) {
-			return;
-		}
-		long unReadCount = 0;
-		for (RecentChatFriendData rcd : mRecentPrivateChatData) {
-			unReadCount += rcd.getUnReadCount();
-		}
-		MessageCenterHelper.sharedInstance().setMsgChat(unReadCount);
-		ChatStorageService.getService().saveRecentChatFriends(
-				TiebaApplication.getCurrentAccount(), mRecentPrivateChatData);
-		// 存服务器返回的私聊数据
-		// 把合并后的数据取出
-		mRecentPrivateChatData = ChatStorageService.getService()
-				.listRecentChatFriends(TiebaApplication.getCurrentAccount());
-	}
-
 	private class DeleteChatAsyncTask extends
 			BdAsyncTask<Object, Integer, Boolean> {
 		private volatile NetWork mNetwork = null;
@@ -511,10 +474,9 @@ public class ChatListModel extends BaseModel {
 			try {
 
 				mNetwork = new NetWork(Config.SERVER_ADDRESS
-						+ Config.RECENT_CHAT_DELETE);
+						+ Config.GET_LOVELIST);
 				// sign=123456tbclient654321&user_id=800018547&com_id=50020462
 
-				mNetwork.setIsNeedTbs(true);
 				mNetwork.addPostData("user_id", mUserId);
 				mNetwork.addPostData("com_id", mFriendId);
 
@@ -526,18 +488,18 @@ public class ChatListModel extends BaseModel {
 						JSONObject temp = json.optJSONObject("error");
 						if (temp.optInt("errno") == 0) {
 							// 删除成功，清空本地缓存
-							ChatStorageService service = ChatStorageService
-									.getService();
-							ChatStorageService.getService().clearRecentMessage(
-									mUserId, mFriendId);
-							service.clearMessages(mUserId, mFriendId);
+//							ChatStorageService service = ChatStorageService
+//									.getService();
+//							ChatStorageService.getService().clearRecentMessage(
+//									mUserId, mFriendId);
+//							service.clearMessages(mUserId, mFriendId);
 							return true;
 						}
 					}
 				}
 
 			} catch (Exception ex) {
-				TiebaLog.e(this.getClass().getName(), "doInBackground",
+				MeetLog.e(this.getClass().getName(), "doInBackground",
 						ex.getMessage());
 				return false;
 			}
@@ -553,14 +515,14 @@ public class ChatListModel extends BaseModel {
 				mLoadDataCallBack.callback(false);
 				return;
 			}
-			ChatNotifyManager.getInstance().refreshGroupMsgList(false,
-					new ISingleRunnableCallback<Void>() {
-
-						@Override
-						public void onReturnDataInUI(Void result) {
-							mLoadDataCallBack.callback(true);
-						}
-					});
+//			ChatNotifyManager.getInstance().refreshGroupMsgList(false,
+//					new ISingleRunnableCallback<Void>() {
+//
+//						@Override
+//						public void onReturnDataInUI(Void result) {
+//							mLoadDataCallBack.callback(true);
+//						}
+//					});
 		}
 
 		public void cancel() {

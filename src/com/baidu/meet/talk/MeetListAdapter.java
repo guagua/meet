@@ -11,9 +11,11 @@ import org.json.JSONException;
 import com.baidu.meet.R;
 import com.baidu.meet.imageLoader.AsyncImageLoader;
 import com.baidu.meet.log.MeetLog;
+import com.baidu.meet.util.BitmapHelper;
 import com.baidu.meet.util.StringHelper;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -156,13 +158,8 @@ public class MeetListAdapter extends BaseAdapter {
 			holder.mCtlText.setBackgroundResource(R.drawable.btn_w_square);
 			holder.mCtlText.setTextColor(0xFF262626);
 		} else { // 正常贴子
-			if (skinType == SkinManager.SKIN_TYPE_NIGHT) {
-				SkinManager.setNineBgResource(convertView,
-						R.drawable.list_selector_1);
-			} else {
-				SkinManager.setNineBgResource(convertView,
-						R.drawable.list_selector_divider1);
-			}
+			
+			convertView.setBackgroundResource(R.drawable.list_selector_divider1);
 
 			holder.mContent.setVisibility(View.VISIBLE);
 			holder.mControl.setVisibility(View.GONE);
@@ -186,21 +183,21 @@ public class MeetListAdapter extends BaseAdapter {
 					// 处理头像
 					refreshHeadImage(holder, data);
 					// 未读
-					refreshUnReadCount(holder, skinType, data);
+					refreshUnReadCount(holder, data);
 
-					if (String.valueOf(
-							String.valueOf(ChatListModel.TYPE_GROUP_VALIDATE))
-							.equals(data.getOwnerName())) {
-						if (data.getUnReadCount() >= MAX_VALIDATE_COUNT) {
-							if (null != fragment) {
-								fragment.setShutDownValidateVisiblity(true);
-							}
-						} else {
-							if (null != fragment) {
-								fragment.setShutDownValidateVisiblity(false);
-							}
-						}
-					}
+//					if (String.valueOf(
+//							String.valueOf(MeetListModel.TYPE_GROUP_VALIDATE))
+//							.equals(data.getOwnerName())) {
+//						if (data.getUnReadCount() >= MAX_VALIDATE_COUNT) {
+//							if (null != fragment) {
+//								fragment.setShutDownValidateVisiblity(true);
+//							}
+//						} else {
+//							if (null != fragment) {
+//								fragment.setShutDownValidateVisiblity(false);
+//							}
+//						}
+//					}
 
 					refreshBellVisiblity(holder, data);
 
@@ -223,48 +220,48 @@ public class MeetListAdapter extends BaseAdapter {
 			return;
 		}
 
-		if (String.valueOf(ChatListModel.TYPE_GROUP_MSG).equals(
-				data.getOwnerName())) {
-			GroupSettingItemData setting = data.getGroupSetting();
-			if (null == setting) {
-				holder.iv_bell.setVisibility(View.GONE);
-				return;
-			}
-			boolean isAccept = setting.isAcceptNotify();
-			if (!isAccept) {
-				holder.iv_bell.setVisibility(View.VISIBLE);
-				int skinType = TiebaApplication.getApp().getSkinType();
-				if (skinType == SkinManager.SKIN_TYPE_NIGHT) {
-					holder.iv_bell.setImageResource(R.drawable.icon_news_stop_1);
-				}else{
-					holder.iv_bell.setImageResource(R.drawable.icon_news_stop);
-				}
-			} else {
-				holder.iv_bell.setVisibility(View.GONE);
-			}
-		} else {
+//		if (String.valueOf(MeetListModel.TYPE_GROUP_MSG).equals(
+//				data.getOwnerName())) {
+//			GroupSettingItemData setting = data.getGroupSetting();
+//			if (null == setting) {
+//				holder.iv_bell.setVisibility(View.GONE);
+//				return;
+//			}
+//			boolean isAccept = setting.isAcceptNotify();
+//			if (!isAccept) {
+//				holder.iv_bell.setVisibility(View.VISIBLE);
+//				int skinType = TiebaApplication.getApp().getSkinType();
+//				if (skinType == SkinManager.SKIN_TYPE_NIGHT) {
+//					holder.iv_bell.setImageResource(R.drawable.icon_news_stop_1);
+//				}else{
+//					holder.iv_bell.setImageResource(R.drawable.icon_news_stop);
+//				}
+//			} else {
+//				holder.iv_bell.setVisibility(View.GONE);
+//			}
+//		} else {
 			holder.iv_bell.setVisibility(View.GONE);
-		}
+//		}
 	}
 
 	private void refreshMsgContent(ViewHolder holder, RecentChatFriendData data)
 			throws JSONException {
 		JSONArray msgTemp = null;
-		if (String.valueOf(ChatListModel.TYPE_GROUP_VALIDATE).equals(
-				data.getOwnerName())) {
-			holder.mChatContent.setText(data.getMsgContent());
-
-		} else if (String.valueOf(ChatListModel.TYPE_GROUP_UPDATES).equals(
-				data.getOwnerName())) {
-			holder.mNameText.setText(mContext
-					.getString(R.string.updates_activity_title));
-			holder.mChatContent.setText(data.getMsgContent());
-		} else if (String.valueOf(ChatListModel.TYPE_GROUP_MSG).equals(
-				data.getOwnerName())) {
-			holder.mChatContent.setText(data.getMsgContent());
-
-		} else {
-			BdLog.d(data.getMsgContent());
+//		if (String.valueOf(MeetListModel.TYPE_GROUP_VALIDATE).equals(
+//				data.getOwnerName())) {
+//			holder.mChatContent.setText(data.getMsgContent());
+//
+//		} else if (String.valueOf(MeetListModel.TYPE_GROUP_UPDATES).equals(
+//				data.getOwnerName())) {
+//			holder.mNameText.setText(mContext
+//					.getString(R.string.updates_activity_title));
+//			holder.mChatContent.setText(data.getMsgContent());
+//		} else if (String.valueOf(MeetListModel.TYPE_GROUP_MSG).equals(
+//				data.getOwnerName())) {
+//			holder.mChatContent.setText(data.getMsgContent());
+//
+//		} else {
+//			BdLog.d(data.getMsgContent());
 			if (TextUtils.isEmpty(data.getMsgContent())) {
 				holder.mChatContent.setText(null);
 			} else {
@@ -276,7 +273,7 @@ public class MeetListAdapter extends BaseAdapter {
 					holder.mChatContent.setText(null);
 				}
 			}
-		}
+//		}
 	}
 
 	/**
@@ -286,76 +283,56 @@ public class MeetListAdapter extends BaseAdapter {
 	 * @param skinType
 	 * @param data
 	 */
-	private void refreshUnReadCount(ViewHolder holder, int skinType,
+	private void refreshUnReadCount(ViewHolder holder,
 			RecentChatFriendData data) {
 		int count = data.getUnReadCount();
-		BdLog.d("type:" + data.getOwnerName() + "  count:" + count);
 		if (count > 0) {
 			holder.mNewMessage.setVisibility(View.VISIBLE);
 			String countString = count > 99 ? "..." : String.valueOf(count);
-			if (!TiebaApplication.getApp().isGroupMsgOn()) {
-				countString = "";
-				count = 0;
-			}
-			if (TiebaApplication.getApp().getMsgFrequency() == 0) {
-				countString = "";
-				count = 0;
-			}
-			if (String.valueOf(ChatListModel.TYPE_GROUP_VALIDATE).equals(
-					data.getOwnerName())) {
-				countString = "";
-				count = 0;
-			} else if (String.valueOf(ChatListModel.TYPE_GROUP_UPDATES).equals(
-					data.getOwnerName())) {
-				countString = "";
-				count = 0;
-			} else if (String.valueOf(ChatListModel.TYPE_GROUP_MSG).equals(
-					data.getOwnerName())) {
-				if (null != data.getGroupSetting()
-						&& !data.getGroupSetting().isAcceptNotify()) {
-					countString = "";
-					count = 0;
-				}
-			}
+//			if (!TiebaApplication.getApp().isGroupMsgOn()) {
+//				countString = "";
+//				count = 0;
+//			}
+//			if (TiebaApplication.getApp().getMsgFrequency() == 0) {
+//				countString = "";
+//				count = 0;
+//			}
+//			if (String.valueOf(MeetListModel.TYPE_GROUP_VALIDATE).equals(
+//					data.getOwnerName())) {
+//				countString = "";
+//				count = 0;
+//			} else if (String.valueOf(MeetListModel.TYPE_GROUP_UPDATES).equals(
+//					data.getOwnerName())) {
+//				countString = "";
+//				count = 0;
+//			} else if (String.valueOf(MeetListModel.TYPE_GROUP_MSG).equals(
+//					data.getOwnerName())) {
+//				if (null != data.getGroupSetting()
+//						&& !data.getGroupSetting().isAcceptNotify()) {
+//					countString = "";
+//					count = 0;
+//				}
+//			}
 
 			holder.mNewMessage.setText(countString);
 		} else {
 			holder.mNewMessage.setVisibility(View.GONE);
 		}
-		if (skinType == SkinManager.SKIN_TYPE_NIGHT) {
-			// holder.mLayout.setBackgroundResource(R.drawable.list_selector_1);
-			holder.mNameText.setTextColor(0xff8397ad);
-			holder.mChatContent.setTextColor(0xff617184);
-			holder.mChatTime.setTextColor(0xff617184);
-			if (count < 10) {
-				holder.mNewMessage
-						.setBackgroundResource(R.drawable.icon_news_head_prompt_one_1);
-			} else if (count < 100) {
-				holder.mNewMessage
-						.setBackgroundResource(R.drawable.icon_news_head_prompt_two_1);
-			} else {
-				holder.mNewMessage
-						.setBackgroundResource(R.drawable.icon_news_head_prompt_more_1);
-				holder.mNewMessage.setText("");
-			}
-			holder.mNewMessage.setTextColor(mContext.getResources().getColor(R.color.top_msg_num_night));
+		holder.mNameText.setTextColor(0xff262626);
+		holder.mChatContent.setTextColor(0xff888888);
+		holder.mChatTime.setTextColor(0xff888888);
+		if (count < 10) {
+			holder.mNewMessage
+			.setBackgroundResource(R.drawable.icon_news_head_prompt_one);
+		} else if (count < 100) {
+			holder.mNewMessage
+			.setBackgroundResource(R.drawable.icon_news_head_prompt_two);
 		} else {
-			holder.mNameText.setTextColor(0xff262626);
-			holder.mChatContent.setTextColor(0xff888888);
-			holder.mChatTime.setTextColor(0xff888888);
-			if (count < 10) {
-				holder.mNewMessage
-						.setBackgroundResource(R.drawable.icon_news_head_prompt_one);
-			} else if (count < 100) {
-				holder.mNewMessage
-						.setBackgroundResource(R.drawable.icon_news_head_prompt_two);
-			} else {
-				holder.mNewMessage
-						.setBackgroundResource(R.drawable.icon_news_head_prompt_more);
-				holder.mNewMessage.setText("");
-			}
-			holder.mNewMessage.setTextColor(mContext.getResources().getColor(R.color.top_msg_num_day));
+			holder.mNewMessage
+			.setBackgroundResource(R.drawable.icon_news_head_prompt_more);
+			holder.mNewMessage.setText("");
 		}
+		holder.mNewMessage.setTextColor(mContext.getResources().getColor(R.color.top_msg_num_day));
 	}
 
 	/**
@@ -365,106 +342,27 @@ public class MeetListAdapter extends BaseAdapter {
 	 * @param data
 	 */
 	private void refreshHeadImage(ViewHolder holder, RecentChatFriendData data) {
-		BdLog.d("ownername:" + data.getOwnerName());
-		if (String.valueOf(ChatListModel.TYPE_GROUP_VALIDATE).equals(
-				data.getOwnerName())) {
-			// 验证消息
-			holder.mHeadImage.setDrawBorder(false);
-			holder.mHeadImage.setAutoChangeStyle(false);
-			holder.mHeadImage.setTag(data.getOwnerName());
-			if (TiebaApplication.getApp().getSkinType() == SkinManager.SKIN_TYPE_NIGHT) {
-				holder.mHeadImage.setImageBitmap(BitmapHelper
-						.getCashBitmap(R.drawable.icon_new_test));
+		// 私聊
+		String portrait = data.getFriendPortrait();
+		String cachePortrait = (String) holder.mHeadImage.getTag();
+		if ((!TextUtils.isEmpty(portrait)
+				&& !TextUtils.isEmpty(cachePortrait) && !cachePortrait
+				.equals(portrait)) || TextUtils.isEmpty(cachePortrait)) {
+			Bitmap bm = mAsyncImageLoader.getPhoto(portrait);
+			if (bm != null) {
+				holder.mHeadImage.setImageBitmap(bm);
+//				bm.drawImageTo(holder.mHeadImage);
 			} else {
-				holder.mHeadImage.setImageBitmap(BitmapHelper
-						.getCashBitmap(R.drawable.icon_new_test));
-
-			}
-			holder.mHeadImage.setUserName(String
-					.valueOf(ChatListModel.TYPE_GROUP_VALIDATE));
-			holder.mHeadImage.setUserId(data.getFriendId());
-			holder.mHeadImage.setIsRound(false);
-			holder.mHeadImage.invalidate();
-
-		} else if (String.valueOf(ChatListModel.TYPE_GROUP_UPDATES).equals(
-				data.getOwnerName())) {
-			// 群动态
-			holder.mHeadImage.setDrawBorder(false);
-			holder.mHeadImage.setAutoChangeStyle(false);
-			holder.mHeadImage.setTag(data.getOwnerName());
-			holder.mHeadImage.setUserName(String
-					.valueOf(ChatListModel.TYPE_GROUP_UPDATES));
-			holder.mHeadImage.setUserId(data.getFriendId());
-			if (TiebaApplication.getApp().getSkinType() == SkinManager.SKIN_TYPE_NIGHT) {
-				holder.mHeadImage.setImageBitmap(BitmapHelper
-						.getCashBitmap(R.drawable.icon_new_trends));
-			} else {
-				holder.mHeadImage.setImageBitmap(BitmapHelper
-						.getCashBitmap(R.drawable.icon_new_trends));
-			}
-			holder.mHeadImage.setIsRound(false);
-			holder.mHeadImage.invalidate();
-		} else if (String.valueOf(ChatListModel.TYPE_GROUP_MSG).equals(
-				data.getOwnerName())) {
-			// 群聊
-			holder.mHeadImage.setDrawBorder(true);
-			holder.mHeadImage.setAutoChangeStyle(true);
-			holder.mHeadImage.setUserId(data.getFriendId());
-			String portrait = data.getFriendPortrait();
-			String cachePortrait = (String) holder.mHeadImage.getTag();
-			if ((!TextUtils.isEmpty(portrait)
-					&& !TextUtils.isEmpty(cachePortrait) && !cachePortrait
-						.equals(portrait)) || TextUtils.isEmpty(cachePortrait)) {
-				BdImage bm = mAsyncImageLoader.getPic(portrait);
-				if (bm != null) {
-					bm.drawImageTo(holder.mHeadImage);
-				} else {
-					holder.mHeadImage.setImageBitmap(BitmapHelper
-							.getCashBitmap(R.drawable.avatar_poto_defaul140));
-				}
-			} else if (TextUtils.isEmpty(portrait)) {
-				holder.mHeadImage.setImageBitmap(BitmapHelper
-						.getCashBitmap(R.drawable.avatar_poto_defaul140));
-			}
-			holder.mHeadImage.setClickable(false);
-			holder.mHeadImage.setTag(data.getFriendPortrait());
-			holder.mHeadImage.setUserId(data.getFriendId());
-			BdLog.d("groupid:" + data.getFriendId() + " groupHeadUrl:"
-					+ data.getFriendPortrait() + " groupName:"
-					+ data.getFriendName());
-			holder.mHeadImage.setUserName(String
-					.valueOf(ChatListModel.TYPE_GROUP_MSG));
-			holder.mHeadImage.setIsRound(false);
-			holder.mHeadImage.invalidate();
-
-		} else {
-			// 私聊
-			holder.mHeadImage.setDrawBorder(true);
-			holder.mHeadImage.setAutoChangeStyle(true);
-			String portrait = data.getFriendPortrait();
-			String cachePortrait = (String) holder.mHeadImage.getTag();
-			if ((!TextUtils.isEmpty(portrait)
-					&& !TextUtils.isEmpty(cachePortrait) && !cachePortrait
-						.equals(portrait)) || TextUtils.isEmpty(cachePortrait)) {
-				BdImage bm = mAsyncImageLoader.getPhoto(portrait);
-				if (bm != null) {
-					bm.drawImageTo(holder.mHeadImage);
-				} else {
-					holder.mHeadImage.setImageBitmap(BitmapHelper
-							.getCashBitmap(R.drawable.person_photo));
-				}
-			} else if (TextUtils.isEmpty(portrait)) {
 				holder.mHeadImage.setImageBitmap(BitmapHelper
 						.getCashBitmap(R.drawable.person_photo));
 			}
-
-			holder.mHeadImage.setTag(data.getFriendPortrait());
-			holder.mHeadImage.setUserId(data.getFriendId());
-			holder.mHeadImage.setUserName(data.getFriendName());
-			holder.mHeadImage.setOnClickListener(mHeadListener);
-			holder.mHeadImage.setIsRound(true);
-			holder.mHeadImage.invalidate();
+		} else if (TextUtils.isEmpty(portrait)) {
+			holder.mHeadImage.setImageBitmap(BitmapHelper
+					.getCashBitmap(R.drawable.person_photo));
 		}
+
+		holder.mHeadImage.setOnClickListener(mHeadListener);
+		holder.mHeadImage.invalidate();
 	}
 
 	private ViewHolder iniHolderView(View convertView) {
@@ -473,7 +371,7 @@ public class MeetListAdapter extends BaseAdapter {
 		holder.mLayout = (ViewGroup) convertView.findViewById(R.id.chat_item);
 		holder.mContent = (ViewGroup) convertView
 				.findViewById(R.id.list_content);
-		holder.mHeadImage = (HeadImageView) convertView
+		holder.mHeadImage = (ImageView) convertView
 				.findViewById(R.id.chat_head);
 		holder.mNameText = (TextView) convertView.findViewById(R.id.chat_name);
 		holder.mChatContent = (TextView) convertView
@@ -492,18 +390,10 @@ public class MeetListAdapter extends BaseAdapter {
 		return holder;
 	}
 
-	public ChatListFragment getFragment() {
-		return fragment;
-	}
-
-	public void setFragment(ChatListFragment fragment) {
-		this.fragment = fragment;
-	}
-
 	private class ViewHolder {
 		ViewGroup mLayout = null;
 		ViewGroup mContent = null;
-		HeadImageView mHeadImage = null;
+		ImageView mHeadImage = null;
 		TextView mNameText = null;
 		TextView mChatContent = null;
 		TextView mChatTime = null;

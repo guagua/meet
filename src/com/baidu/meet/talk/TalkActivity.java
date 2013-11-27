@@ -1,11 +1,10 @@
 package com.baidu.meet.talk;
 
 import com.baidu.meet.R;
-import com.baidu.meet.R.layout;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.content.Intent;
 
 public class TalkActivity extends Activity {
 
@@ -13,6 +12,13 @@ public class TalkActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_talk);
+	}
+
+	public static void startChatActivity(MeetListActivity meetListActivity,
+			String friendId, String friendName, String friendPortrait,
+			Object object, String string) {
+		Intent intent = new Intent(meetListActivity, TalkActivity.class);
+		meetListActivity.startActivity(intent);
 	}
 
 }
