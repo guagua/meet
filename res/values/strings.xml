@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+	<string name="adp_pull_to_refresh">下拉刷新</string>
+	<string name="adp_refreshing">刷新中...</string>
+	<string name="adp_pull_up_to_get_more">上拉或点击获取更多</string>
+	
+	<string name="adp_pull_view_date_tip">最后更新：</string>
+	<string name="adp_release_to_get_more">可以松手了</string>
+    <string name="adp_refreshed">上次更新时间</string>
+    <string name="adp_release_to_refresh">释放刷新</string>
+    <string name="adp_loading">正在加载</string>
 
     <string name="app_name">meet</string>
     <string name="action_settings">Settings</string>

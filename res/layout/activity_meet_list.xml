@@ -8,9 +8,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MeetListActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <com.baidu.meet.view.NavigationBar
+        android:id="@+id/navigation_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+    <com.baidu.meet.ListView.BdListView
+        android:layout_below="@id/navigation_bar"
+        android:id="@+id/chat_list_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:dividerHeight="2dip"
+        android:fadingEdge="@null"
+        android:listSelector="@android:color/transparent"
+        android:smoothScrollbar="true" />
 
 </RelativeLayout>
